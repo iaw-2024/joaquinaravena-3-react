@@ -13,17 +13,18 @@ const jugadores = [
 ];
 
 const express = require("express");
-const cors = require('cors');
+const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// Permitir solicitudes desde localhost:3001
-app.use(cors({ origin: 'http://localhost:3001' }));
+
+app.use(express.static(path.join(__dirname, '../cliente/build')));
 
 app.listen(PORT, () => console.log(`Servidor Express corriendo en el puerto ${PORT}`));
 
 //datos
 app.get('/api/jugadores' , (req, res) => {
+    console.log("Llamado!!")
     const data = {
       jugadores: jugadores
     };

@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     const obtenerJugadores = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/jugadores');
+        const response = await fetch('/api/jugadores');
         const data = await response.json();
         const agrupados = agruparJugadoresPorPosicion(data.jugadores);
         setJugadoresAgrupados(agrupados);
