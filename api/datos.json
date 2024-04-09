@@ -1,4 +1,5 @@
-[
+{
+  "jugadores": [
     { "id": 12, "nombre": "Leandro Brey", "posicion": "Arquero" },
     { "id": 42, "nombre": "Lucas Blondel", "posicion": "Defensor" },
     { "id": 38, "nombre": "Aaron Anselmino", "posicion": "Defensor" },
@@ -11,4 +12,5 @@
     { "id": 16, "nombre": "Miguel Merentiel", "posicion": "Delantero" },
     { "id": 10, "nombre": "Edinson Cavani", "posicion": "Delantero" }
   ]
+}
   
