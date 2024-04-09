@@ -1,10 +1,17 @@
 const express = require("express");
+const path = require("path");
 const app = express();
+const PORT = 3000;
+const jugadores = require('./datos.json');
 
-app.get("/datos", (req, res) => res.send("Express on Vercel!"));
-app.use(express.static('public'))
 
+app.use(express.static(path.join(__dirname, '../cliente/build')));
 
-app.listen(3001, () => console.log("Server ready on port 3001."));
+app.listen(PORT, () => console.log(`Servidor Express corriendo en el puerto ${PORT}`));
+
+//datos
+app.get('/api/jugadores' , (req, res) => {
+    res.send(jugadores);
+  });
 
 module.exports = app;
